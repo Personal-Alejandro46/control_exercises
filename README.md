@@ -379,3 +379,15 @@ V_2(t) = K_{D2} \, [ \dot{\theta}_{d2} - \dot{\theta}_2 ]
 - \( \dot{\theta}_1, \dot{\theta}_2 \): actual angular velocities
 
 ---
+
+# ⚙️ Derivative Control — Explanation and Analysis
+
+## 🧩 Why “0” Appears in the Code
+
+You might be wondering why the derivative control is implemented with a **"0"** in the code:
+Its - because desired its a constants
+```python
+# start ------
+v1 = KD1 * (0 - dq[0, 0])
+v2 = KD2 * (0 - dq[1, 0])
+# end --------
